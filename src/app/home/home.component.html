@@ -1,0 +1,36 @@
+<!-- Login Page -->
+<div class="card">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card-1">
+
+                    <form  class="container" >
+                        <div class="mb-3">
+                            <h1>Login</h1>
+                            <h5>Please enter your username & password</h5>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email">UserName :&nbsp;&nbsp; </label>
+                            <input type="email" id="username"  name="email" [(ngModel)]="email" /><br>
+   
+                        </div>
+                        <br>
+                        <div class="mb-3">
+                            <label for="password">Password  :&nbsp;&nbsp; </label>
+                            <input type="password" id="password"   name="password" [(ngModel)]="password" />
+                           
+                        </div><br>
+                        <input type="submit" id="submit" value="log in" class="submit" (click)="login()">
+                    </form>
+                <p>{{Message}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    
