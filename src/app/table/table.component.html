@@ -1,8 +1,5 @@
- <!--navbar top in bootstrap -->
-
- 
- 
  <!-- Data table for patient entries -->
+
  <table datatable class="row-border hover">
     <thead>
       <tr>
@@ -12,66 +9,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>Foo</td>
+      <tr *ngFor='let p of Patient'>
+        <td>{{p._id}}</td>
+        <td>{{p.PatientName}}</td>
         <td>29/03/2022</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Someone</td>
-        <td>30/05/2022</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Iamout</td>
-        <td>22/2/2022</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Yoda</td>
-        <td>27/05/2022</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Patrick</td>
-        <td>24/03/2022</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>Barack</td>
-        <td>21/02/2022</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>François</td>
-        <td>16/05/2022</td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>Michel</td>
-        <td>16/05/2022</td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td>Chuck</td>
-        <td>16/05/2022</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>Simon</td>
-        <td>16/05/2022</td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>Louis</td>
-        <td>16/05/2022</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>Zelda</td>
-        <td>16/05/2022</td>
-      </tr>
+      </tr >
     </tbody>
   </table>
 
@@ -166,5 +108,8 @@
     </div>
   </div>
   <!-- End of Expense Calculation form -->
+
+  <!-- declaration of array in angular-->
+  
 
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PatientserviceService } from '../patientservice.service';
 
 @Component({
   selector: 'app-table',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-
-  constructor() { }
-
+  Patient:any[]=[];
+  constructor(private patservice:PatientserviceService){}
   ngOnInit(): void {
+    this.patservice.getPatient().subscribe((data:any)=>this.Patient=data);
   }
-
 }
