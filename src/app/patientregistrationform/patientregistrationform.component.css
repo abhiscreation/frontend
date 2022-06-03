@@ -1,0 +1,51 @@
+body{
+    padding: 80px;
+    margin: auto 30px;
+    box-sizing: border-box;
+    
+      
+  }
+      h1{
+      text-align: center;
+      color:#008080;
+      font-size: 30px;
+      
+  }
+  .container{
+      max-width: 700px;
+      width: 100%;
+      background-color:lightblue;
+      padding: 25px 30px;
+      border-radius: 5px;
+      box-shadow: 5px 5px 5px 5px black;
+      column-gap: 50px;
+      
+    }
+    .button{
+      text-align:center;
+      padding-top: 20px;
+    }
+  
+    .checkboxes {
+      text-align:center;
+    }
+    
+    .checkboxes input{
+      margin: 0px 0px 0px 0px;
+    }
+    
+    .checkboxes label{
+      margin: 0px 20px 0px 3px;
+    }
+  
+    .checkboxes1 {
+      text-align:center;
+    }
+    
+    .checkboxes1 input{
+      margin: 0px 0px 0px 0px;
+    }
+    
+    .checkboxes1 label{
+      margin: 0px 20px 0px 3px;
+    }

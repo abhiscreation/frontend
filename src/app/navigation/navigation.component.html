@@ -3,15 +3,16 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+      <mat-toolbar class="main"><b>MENU</b></mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item routerLink="/registration">Patient Registration</a>
+      <a mat-list-item href="#">Expenses</a>
+      <a mat-list-item href="#">Patient Details</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+   
+      <h1><b>HOSPITAL MANAGEMENT SYSTEM</b></h1>
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -20,9 +21,10 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>sprint-1-project</span>
-    </mat-toolbar>
+      
+   <hr>
     <!-- Add Content Here -->
+    <router-outlet></router-outlet>
     <app-dashboard></app-dashboard>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,24 +1,23 @@
-<div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{card.title}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+<div class="container">
+  <div class="column1">
+    <img class="container__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRchCvTCsh8sEZm7XfUhohKjQmlZxQx6ELCJg&usqp=CAU"/>
+  
+      <h2><b>ABOUT</b></h2>
+      <p>A hospital is a health care institution providing patient treatment with specialized health science and auxiliary healthcare staff and medical equipment. The best-known type of hospital is the general hospital, which typically has an emergency department to treat urgent health problems ranging from fire and accident victims to a sudden illness. A district hospital typically is the major health care facility in its region, with many beds for intensive care and additional beds for patients who need long-term care</p>
+    
+  </div>
+  <div class="column2">
+    <img class="container__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb31BoWVU3T3v8vCmVx-3u5KXMvU1MF5oGSQ&usqp=CAU"/>
+ 
+      <h2><b>VISION</b></h2>
+      <p>To bring healthcare of International standards to this region, to evolve as a premier hospital in the country and to TOUCH the lives of the people we serve through excellence in clinical care, quality and commitment.</p>
+  
+  </div>
+  <div class="column3">
+    <img class="container__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYgaSEaCjsqS_DB4GCx77QuaAeT-lnfMMxJQ&usqp=CAU">
+
+      <h2><b>MISSION</b></h2>
+      <p>To provide Hope, Care and Cure. To provide compassionate, accessible, high quality, cost effective healthcare to one all. To serve with a patient's first motto and to work towards a patient- centered care.</p>
+
+  </div>
 </div>
