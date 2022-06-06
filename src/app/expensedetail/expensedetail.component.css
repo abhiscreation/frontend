@@ -1,0 +1,26 @@
+th, td , tr
+  {
+    padding: 5px;
+    text-align: center;
+
+  }
+
+  tr:hover {background-color: rgb(238, 200, 139);}
+
+  table 
+    {
+    border-collapse: collapse;
+    width: 600px;
+    padding-left: 10px;
+   
+    }
+  table, td, th 
+  {  
+    border: 1px solid #ddd;
+    text-align: left;
+  
+  }
+  .container{
+     text-align: left;
+ 
+  }

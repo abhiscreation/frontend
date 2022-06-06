@@ -1,10 +1,8 @@
- <!-- Data table for patient entries -->
-
- <div class="container">
-
-  <input type="text" name="search" placeholder="search here" style="width:500px" />
-  <br>
-  <br>
+<div class="container"  ng-controller="mycontroller">
+  <input type="text" class="form-control"  name="name"  [(ngModel)]="searchText" (ngModelChange)="search()"  placeholder="search here" />
+  <br/>
+  <br/>
+  
   <table datatable class="row-border hover" >
     <thead>
       <tr>
@@ -13,27 +11,22 @@
         <th>Patient Age</th>
         <th>Registration Date</th>
         <th>Disease</th>
-        <th>Tests</th>
-        <th>Edit<span class="glyphicon glyphicon-pencil"></span></th>
-
+        <th>Test</th>
+        <th>Edit &nbsp;<span class="glyphicon glyphicon-pencil"></span></th>
+        <th >Delete &nbsp;<span class="glyphicon glyphicon-trash"></span></th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let p of Patient'>
-        <td >{{p._id}}</td>
+      <tr *ngFor='let p of Patient;'>
+        <td>{{p._id}}</td>
         <td>{{p.PatientName}}</td>
         <td>{{p.PatientAge}}</td>
         <td>{{p.RegistrationDate}}</td>
         <td>{{p.Disease}}</td>
-        <td>{{p.Tests}}</td>
-        <th>{{p.Edit}}<span class="glyphicon glyphicon-pencil"></span></th>
-      </tr>
+        <td>{{p.Test}}</td>
+          <td><button type="button" id="Edit" class="btn btn-danger">update</button></td>
+          <td><button type="button" id="delete" class="btn btn-danger">Delete</button></td>
+      </tr >
     </tbody>
   </table>
- </div>
-
- <!-- Create popup form in angular  -->
-<div>
-
 </div>
- 

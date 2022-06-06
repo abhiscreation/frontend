@@ -20,6 +20,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { PatientregistrationformComponent } from './patientregistrationform/patientregistrationform.component';
+import { LoginauthenticationComponent } from './loginauthentication/loginauthentication.component';
+import { ExpensedetailComponent } from './expensedetail/expensedetail.component';
+import { ExpenseComponent } from './expense/expense.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +32,10 @@ import { PatientregistrationformComponent } from './patientregistrationform/pati
     TableComponent,
     NavigationComponent,
     DashboardComponent,
-    PatientregistrationformComponent
+    PatientregistrationformComponent,
+    LoginauthenticationComponent,
+    ExpensedetailComponent,
+    ExpenseComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,6 @@ import { PatientregistrationformComponent } from './patientregistrationform/pati
     ReactiveFormsModule,
     DataTablesModule,
     HttpClientModule,
-    FormsModule,
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
@@ -46,7 +52,8 @@ import { PatientregistrationformComponent } from './patientregistrationform/pati
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule
   
   ],
   providers: [],

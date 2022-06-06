@@ -12,6 +12,7 @@ export class PatientregistrationformComponent implements OnInit {
   saveuser(data:any){
 this.patient.saveUser(data).subscribe((result:any)=>{
   console.warn(result)
+  alert("Patient Registered successfully")
 })
   }
 

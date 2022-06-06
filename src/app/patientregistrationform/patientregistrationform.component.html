@@ -1,83 +1,51 @@
-<body>
-  <h1>PATIENT REGISTRATION FORM</h1>
-
-        <form class="cont"  #usersForm='ngForm' (ngSubmit)='saveuser(usersForm.value)'>
-            <div class="container">
-              <label for="id" class="form-label">Patient_id: </label>
-              <input type="id" ngModel name="_id"  class="form-control" id="input id"placeholder="enter id">
+<!-- Div tag for forms -->
+<div class="container">
+  <div class="row">
+   
+     <h1 class="card-title">Patient Registration</h1>
+        </div>
+        <div class="card-body">
+          <form class="cont"  #usersForm='ngForm' (ngSubmit)='saveuser(usersForm.value)' >
+          
+              <label for="exampleInputEmail1">Patient ID</label>
+              <input type="text" ngModel name="_id" class="form-control" id="exampleInputID" aria-describedby="emailHelp" placeholder="Enter Patient ID">
            
-              <label for="inputpatientname" class="form-label">Patient Name: </label>
-              <input type="Patient Name" ngModel name="PatientName"  class="form-control" id="Patient Name"placeholder="enter Name">
-        
-              <label for="Age" class="form-label">Age: </label>
-              <input type="number" ngModel name="PatientAge"  class="form-control" id="Age" placeholder="enter age">
+       
+              <label for="exampleInputEmail1">Patient Name</label>
+              <input type="text" ngModel name="PatientName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter patient name">
            
-              <label for="registration Date" class="form-label">Registration Date: </label>
-              <input type="Date" ngModel name="RegistrationDate"  class="form-control" id="registration date" placeholder="enter registration date">
-              <br>
-
-              <label for="exampleFormControlSelect1">Select Patient Disease:</label>
-              
-              <div class="checkboxes">
-              <label class="checkbox-option">
-              <input type="checkbox" ngModel name="Diease"  value="Fever" /> Fever</label >
-                
-                <label class="checkbox-option">
-                <input type="checkbox" ngModel name="Diease"  value="Fatigue" /> Fatigue </label>
-                
-                <label class="checkbox-option">
-                <input type="checkbox" ngModel name="Diease"  value="cough" /> cough</label>
-                
-                <label class="checkbox-option">
-                <input type="checkbox" ngModel name="Diease" value="Allergy" /> Allergy</label>
-
-                  <label class="checkbox-option">
-                     <input type="checkbox" ngModel name="Diease" value="Abdominal pain" />Abdominal pain</label>
-
-                    <label class="checkbox-option">
-                      <input type="checkbox" ngModel name="Diease" value="Selection 4" />
-                      typhoid</label></div>
-
-                      <label for="exampleFormControlSelect1">Test pattern:</label><br>
-                      <div class="checkboxes1">
-                <br>
-               
-                <label class="checkbox-option">
-                  <input type="checkbox" ngModel name="Test" value="WBC" />
-                  WBC
-                </label>
-                
-                <label class="checkbox-option">
-                  <input type="checkbox" ngModel name="Test" value="RBC" />
-                  RBC
-                </label>
-                
-                <label class="checkbox-option">
-                  <input type="checkbox" ngModel name="Test" value="Sugar-test" />
-                  Sugar-test
-                </label>
-                
-                <label class="checkbox-option">
-                  <input type="checkbox" ngModel name="Test" value="vapour" />
-                  vapour
-                </label>
-
-                <label class="checkbox-option">
-                  <input type="checkbox" ngModel name="Test" value="CT-SCAN" />
-                  CT-Scan
-                </label>
-                
-                
-                <label class="checkbox-option">
-                  <input type="checkbox" ngModel name="Test" value="Widal-Test" />
-                  Widal test
-                </label>
-                  
-           <br></div>
-           <div class="button">
-            <input type="submit" value="REGISTER">
-           </div>
             
-            </div>
+              <label for="exampleInputEmail1">Patient Age</label>
+              <input type="text" ngModel name="PatientAge" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Patient's Age">
+          
+            
+              <label for="exampleInputPassword1">Registration Date</label>
+              <input type="date" ngModel name="RegistrationDate" class="form-control" id="exampleInputPassword1" placeholder="Enter registration date">
+        
+           
+              <label for="exampleFormControlSelect1">Select Patient Disease</label>
+              <select class="form-control" id="exampleFormControlSelect1" ngModel name="Disease">
+                <option>Select--</option>
+                <option value="Abdominal Pain">Abdominal Pain</option>
+                <option value="Typhoid">Typhoid</option>
+                <option value="Diarrhea" >Diarrhea</option>
+                <option value="Malaria">Malaria</option>
+                <option value="Allergies">Allergies</option>
+                <option value="Fever">Fever</option>
+              </select>
+              <label for="exampleFormControlSelect1">Select Patient Test</label>
+              <select class="form-control" id="exampleFormControlSelect1" ngModel name="Test">
+                <option >Select--</option>
+                <option value="CT-Scan" >CT-Scan</option>
+                <option value="Widal test">Widal test</option>
+                <option value="Blood test">Blood Test</option>
+                <option value="PCR">PCR</option>
+                <option value="Dermial test">Dermial test</option>
+               </select>
+          <div class="button">
+            <button type="submit" class="btn btn-primary">REGISTER</button>
+          </div>
+            
           </form>
-          </body>
+        </div>
+      </div>

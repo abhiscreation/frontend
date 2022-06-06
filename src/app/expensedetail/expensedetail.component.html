@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>EXPENSE DETAILS</h1>
+    <table datatable class="row-border hover" >
+      <thead>
+        <tr>
+          <th>Patient ID</th>
+          <th>Patient Name</th>
+          <th>Medicine Name</th>
+          <th>Medicine Amount</th>
+          <th>Per Day Charges</th>
+          <th>Test Amount</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let e of expense">
+                    <td >{{e.patient}}</td>
+                  <td>{{e.patientName}}</td>
+                  <td>{{e.medicinename}}</td>
+                  <td>{{e.medicineamount}}</td>
+                  <td>{{e.perday}}</td>
+                  <td>{{e.testamount}}</td>
+            
+                </tr>
+            </tbody>
+        </table>
+</div>

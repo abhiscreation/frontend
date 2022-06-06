@@ -1,0 +1,35 @@
+<!-- form for expense calculation -->
+<div class="container">
+    
+    <h1 class="card-title">PATIENT EXPENSE CALCULATION</h1>
+ 
+  <div class="card-body">
+    <form #expenseForm='ngForm' (ngSubmit)='makeuser(expenseForm.value)'>
+
+        <label for="exampleInputEmail1">Medicine Name</label>
+        <input type="text" ngModel name="medicinename" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Medicine name">
+    
+   
+        <label for="exampleInputEmail1">Medicine Amount</label>
+        <input type="number" ngModel name="medicineamount" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Medicine Amount">
+    
+     
+        <label for="exampleInputEmail1">patient id</label>
+        <input type="number" ngModel name="patient" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter patient id">
+
+        <label for="exampleInputEmail1">Test Amount</label>
+        <input type="number" ngModel name="testamount" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Test Amount">
+    
+   
+        <label for="exampleInputEmail1">Other charges</label>
+        <input type="number" ngModel name="perday" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Other charges">
+     <br>
+      <div class="button">
+      <button type="submit" class="button ">Generate Expense</button>
+    </div>
+    </form>
+
+  
+</div>
+</div>
+<!-- End of Expense Calculation form -->

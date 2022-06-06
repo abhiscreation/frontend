@@ -5,9 +5,13 @@
       [opened]="(isHandset$ | async) === false">
       <mat-toolbar class="main"><b>MENU</b></mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/registration">Patient Registration</a>
-      <a mat-list-item href="#">Expenses</a>
-      <a mat-list-item href="#">Patient Details</a>
+      <a mat-list-item (click)="dash()">Dashboard</a>
+      <a mat-list-item (click)="reg()">Patient Registration</a>
+      <a mat-list-item (click)="dis()">Patient Details</a>
+      <a mat-list-item (click)="exp()">Expense Details</a>
+      <a mat-list-item (click)="ex()">Expenses</a>
+      <br>
+      <button style="width:150px;"(click)="logout()">LOGOUT</button>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -23,8 +27,13 @@
       </button>
       
    <hr>
+
+   <div *ngIf="dashboard"><app-dashboard class="dashboard"></app-dashboard></div>
+   <div *ngIf="registration"><app-patientregistrationform class="registration"></app-patientregistrationform></div>
+   <div *ngIf="table"><app-table class="table"></app-table></div>
+   <div *ngIf="expensedetail"><app-expensedetail class="expensedetail"></app-expensedetail></div>
+   <div *ngIf="expense"><app-expense class="expense"></app-expense></div>
+
     <!-- Add Content Here -->
-    <router-outlet></router-outlet>
-    <app-dashboard></app-dashboard>
   </mat-sidenav-content>
 </mat-sidenav-container>

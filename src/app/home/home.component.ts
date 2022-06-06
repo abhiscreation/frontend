@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,22 +13,23 @@ export class HomeComponent{
   email:string="";
 password:string=""
 
-constructor(private http:HttpClient){ }
+constructor(private http:HttpClient,private router:Router){ }
 
 Message:string=""
   ngOnit(){
-   
   }
 login(){
  let credentials={
 email:this.email,
 password:this.password
  }
- this.http.post("http://localhost:5000/login/login",credentials).subscribe((res:any)=>{
-this.Message="Login Successfully"
+ this.http.post("http://localhost:5000/login/login",credentials).subscribe((res:any)=>
+ {
+  localStorage.setItem('User',JSON.stringify(res))
+  this.router.navigateByUrl('/navigation',{replaceUrl:true})
  },
  (error:any)=>{
-  this.Message="Incorrect username or password"
+  alert("Invalid Credentials")
  })
  
 }

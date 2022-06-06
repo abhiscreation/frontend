@@ -1,0 +1,26 @@
+.card-title{
+    font-weight: 800;
+    text-align: center;
+   padding-top: 20px;
+    padding-bottom: 20px;
+}
+.card-body{
+   
+    padding-left: 30%;
+    padding-right: 30%;
+  height: 800px;
+}
+.button{
+    text-align: center;
+    width: 200px;
+    background-color: black;
+    color: rgb(254, 253, 255);
+}
+.container{
+   background-color: lightblue;
+   width: 500px;
+   height: 500px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   box-shadow: 5px 5px 5px 5px black;
+}
