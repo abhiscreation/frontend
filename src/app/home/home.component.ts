@@ -28,7 +28,8 @@ password:this.password
   localStorage.setItem('User',JSON.stringify(res))
   this.router.navigateByUrl('/navigation',{replaceUrl:true})
  },
- (error:any)=>{
+ (error:any)=>
+ {
   alert("Invalid Credentials")
  })
  
